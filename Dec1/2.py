@@ -9,12 +9,13 @@ print (__file__)
 
 
 
-# max to hold the max number of all groups
+# groupedList to hold in it all groups calories groupe by group
 # temp to hold the adition for each group
-max = 0
 temp = 0
+groupedList = []
 
-f = open(os.path.join(dirname,"1.txt"), "r")
+
+f = open(os.path.join(dirname,"2.txt"), "r")
 
 lines = f.readlines()
 
@@ -24,8 +25,7 @@ for line in lines:
     # to detect when we start the data for new group (new line)
     if line.strip() == "":
         # empty line. The end if the group. Change the max if needed
-        if max < temp:
-            max = temp
+        groupedList.append(temp)
         temp = 0
     else:
         # not empty line. keep adding to temp
@@ -33,4 +33,9 @@ for line in lines:
 
 f.close()
 
-print(max)
+
+# sorting the list to get the max 3
+groupedList.sort()
+length = len(groupedList)
+
+print(groupedList[-1] + groupedList[-2] + groupedList[-3])
