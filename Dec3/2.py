@@ -44,13 +44,14 @@ def init():
         print(lineLength)
         print(line)
 
+        # group each three lines together in a list then perform some proccess on them
         if(groupCount == 2):
             groupCount += 1
             group.append(line)
 
             print("")
 
-            # do a function
+            # the main process
             temp = checkGroupMatch(group)
             charFound.append(temp)
 
@@ -64,25 +65,11 @@ def init():
             groupCount += 1
             group.append(line)
 
-
-        # subsets = [line[:int(lineLength/2)], line[int(lineLength/2):]]
-        # print(subsets)
-
-
-
-        # print("")
-
-        # temp = checkMatch(subsets[0],subsets[1])
-        # charFound.append(temp)
-
-        # print(temp)
-
-        # print("")
-
     f.close()
 
 
-
+    # looping throw all charachters found and convert them to numbers
+    # then combining them in total
     for char in charFound:
         print ("")
         result = charNumber.index(char)
@@ -98,23 +85,7 @@ def init():
 
 
 
-
-
-# checking for the match
-def checkMatch(subset1,subset2):
-
-    s = wrap(subset1,1)
-    print(s)
-
-    for char in s:
-        # print(subset2.find(char))
-        print(subset2 + " check for " + char)
-        print("cehcking")
-        check = subset2.find(char)
-        if(check > -1):
-            return char
-
-
+# checking for a match between 3 sets
 def checkGroupMatch(group):
     s = wrap(group[0],1)
     print(s)
