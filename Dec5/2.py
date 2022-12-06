@@ -10,14 +10,14 @@
 # loop throw all containers spots and combine the last itme of them
 
 # containers shape
-# [M]                     [N] [Z]    
-# [F]             [R] [Z] [C] [C]    
-# [C]     [V]     [L] [N] [G] [V]    
-# [W]     [L]     [T] [H] [V] [F] [H]
-# [T]     [T] [W] [F] [B] [P] [J] [L]
-# [D] [L] [H] [J] [C] [G] [S] [R] [M]
-# [L] [B] [C] [P] [S] [D] [M] [Q] [P]
-# [B] [N] [J] [S] [Z] [W] [F] [W] [R]
+#     [H]         [H]         [V]    
+#     [V]         [V] [J]     [F] [F]
+#     [S] [L]     [M] [B]     [L] [J]
+#     [C] [N] [B] [W] [D]     [D] [M]
+# [G] [L] [M] [S] [S] [C]     [T] [V]
+# [P] [B] [B] [P] [Q] [S] [L] [H] [B]
+# [N] [J] [D] [V] [C] [Q] [Q] [M] [P]
+# [R] [T] [T] [R] [G] [W] [F] [W] [L]
 #  1   2   3   4   5   6   7   8   9 
 
 # test containers shape
@@ -44,15 +44,15 @@ def init():
 
     containersHolder = [
         ["",""],
-        ["B", "L", "D", "T", "W", "C", "F", "M"],
-        ["N", "B", "L"],
-        ["J", "C", "H", "T", "L", "V"],
-        ["S", "P", "J", "W"],
-        ["Z", "S", "C", "F", "T", "L", "R"],
-        ["W", "D", "G", "B", "H", "N", "Z"],
-        ["F", "M", "S", "P", "V", "G", "C", "N"],
-        ["W", "Q", "R", "J", "F", "V", "C", "Z"],
-        ["R", "P", "M", "L", "H"],
+        ["R", "N", "P", "G"],
+        ["T", "J", "B", "L", "C", "S", "V", "H"],
+        ["T", "D", "B", "M", "N", "L"],
+        ["R", "V", "P", "S", "B"],
+        ["G", "C", "Q", "S", "W", "M", "V", "H"],
+        ["W", "Q", "S", "C", "D", "B", "J"],
+        ["F", "Q", "L"],
+        ["W", "M", "H", "T", "D", "L", "F", "V"],
+        ["L", "P", "B", "V", "M", "J", "F"],
     ]
 
     containersHolderTest = [
