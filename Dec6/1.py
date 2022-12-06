@@ -62,13 +62,26 @@ def init():
     f.close()
 
 
+# IMPORTANT: old and deprecated and for manual testing only
 # checking if the 3 cahr in the Plist and the char all are unique from each other
-def CheckForUniqueCode(Plist, char):
+def CheckForUniqueCode_(Plist, char):
     if((Plist[0] != Plist[1]) and (Plist[0] != Plist[2]) and (Plist[1] != Plist[2])):
         if((char != Plist[0]) and (char != Plist[1]) and (char != Plist[2])):
             return True
     
     return False
+    
+# checking if all the items in Plist and char are all unique from each other
+def CheckForUniqueCode(Plist, char):
+
+    for i in range(len(Plist)):
+        for j in range(i):
+            if(Plist[i] == Plist[j]):
+                return False
+        if(Plist[i] == char):
+            return False
+    
+    return True
 
 
 
