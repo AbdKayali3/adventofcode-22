@@ -52,9 +52,8 @@ def init():
                     break
                 else:
                     print("Negative")
-                    previews3Char[0] = previews3Char[1]
-                    previews3Char[1] = previews3Char[2]
-                    previews3Char[2] = char
+                    previews3Char = previews3Char[1:]
+                    previews3Char.append(char) 
             else:
                 previews3Char.append(char)
                 print("not yet")
