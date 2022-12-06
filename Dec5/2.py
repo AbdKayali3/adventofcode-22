@@ -63,10 +63,10 @@ def init():
     ]
 
     # to flip between different container lists without changing anything in the code itself
-    currentContainerOnUse = containersHolderTest
+    currentContainerOnUse = containersHolder
 
     # reading the file
-    f = open(os.path.join(dirname,"2_test.txt"), "r")
+    f = open(os.path.join(dirname,"2.txt"), "r")
     lines = f.readlines()
 
 
@@ -88,6 +88,7 @@ def init():
         # perform the movments
         tempMove = moveContainer(currentContainerOnUse, int(movment[1]), int(movment[3]), int(movment[5]))
         print(tempMove)
+        print(currentContainerOnUse)
 
 
         
@@ -128,7 +129,7 @@ def moveContainer(Clist, steps, Cfrom, Cto):
         tempHolder.append(temp)
 
 
-    for item in tempHolder:
+    for item in reversed(tempHolder):
         Clist[Cto].append(item)
 
     
