@@ -25,6 +25,7 @@ def init():
     # looping through all lines
     for line in lines:
 
+        line = line.rstrip()
         print(line)
 
     f.close()
